@@ -21,7 +21,6 @@ def run_tests(node_count):
     if check_grid_health():
         print(f"Running tests with {node_count} node(s)...")
         subprocess.run(["docker-compose", "up", "--scale", f"chrome={node_count}", "--abort-on-container-exit"])
-        subprocess.run(["docker-compose", "down"])
     else:
         print("Cannot run tests as Selenium Grid is not ready.")
 
