@@ -5,6 +5,7 @@ services:
     container_name: selenium-hub
     ports:
       - "4444:4444"
+    restart: always
     networks:
       - test-network
 
